@@ -14,7 +14,7 @@ pip install -r ./Dialogue modeling/requirements_python.txt
 
 위 드라이브 링크에서 다운 받아서 Dialogue modeling 폴더안에 saved_models 폴더 만들고 그 안에 넣어주세요.
 
-3**) 실행하기**
+**3) 실행하기**
 
 Dialogue modeling 폴더에서 실행해 주세요.
 
