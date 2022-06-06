@@ -36,14 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\pstfl\Documents\Unity\Metaverse_Final\Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\SpeechSDK\Plugins\x86_64\Microsoft.CognitiveServices.Speech.csharp.dll" />
-  </ItemGroup>
-  <ItemGroup>
+     <Compile Include="Assets\UMA\Examples\Editor\Legacy\EnvPresetChooserEd.cs" />
+     <Compile Include="Assets\UMA\Examples\Editor\Jiggle\JiggleButtEditor.cs" />
      <Compile Include="Assets\UMA\Examples\Editor\Jiggle\JiggleBreastEditor.cs" />
      <Compile Include="Assets\UMA\Examples\Editor\Legacy\BRDFLookupTextureInspector.cs" />
-     <Compile Include="Assets\UMA\Examples\Editor\Legacy\EnvPresetChooserEd.cs" />
      <Compile Include="Assets\UMA\Examples\Editor\Physics\UMABoneVisualizerEditor.cs" />
-     <Compile Include="Assets\UMA\Examples\Editor\Jiggle\JiggleButtEditor.cs" />
      <Compile Include="Assets\UMA\Examples\Editor\DynamicCharacterSystem Examples\PhotoBoothInspector.cs" />
      <Compile Include="Assets\UMA\Examples\Editor\Physics\ClothHelperEditor.cs" />
      <None Include="Assets\UMA\Examples\Editor\UMA_Examples_Editor.asmdef" />
@@ -302,35 +299,35 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.2f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="log4netPlastic">
+        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-    </Reference>
-    <Reference Include="log4netPlastic">
-        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CognitiveServices.Speech.csharp">
+        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\SpeechSDK\Plugins\x86_64\Microsoft.CognitiveServices.Speech.csharp.dll</HintPath>
+    </Reference>
     <Reference Include="unityplastic">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CognitiveServices.Speech.csharp">
-        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\SpeechSDK\Plugins\x86_64\Microsoft.CognitiveServices.Speech.csharp.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

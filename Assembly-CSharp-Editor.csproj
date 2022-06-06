@@ -36,75 +36,72 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\pstfl\Documents\Unity\Metaverse_Final\Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\SpeechSDK\Plugins\x86_64\Microsoft.CognitiveServices.Speech.csharp.dll" />
-  </ItemGroup>
-  <ItemGroup>
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncPreset.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncModuleSettings.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\PocketSphinx\ASPocketSphinxLanguageModel.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncDataPreprocessor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\PocketSphinx\ASPocketSphinxPhonemeDetectionModuleEditor.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\ASMontrealPhonemeDetectionSettingsEditor.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\AutoSyncSetupWizard.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\AudioUtility.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncEditorExtensions.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\PhonemeSetEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\ASAzureSpeechRecognitionModuleEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncExternalPhonemeMapEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncModuleInfoAttribute.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSync.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncDataEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\ASMontrealPhonemeDetectionSettings.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\ASMontrealLanguageModelEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncExternalPhonemeMap.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\BakeBlendshapesTool.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\MarkerSettingsWindow.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\ClipSettingsWindow.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Set Intensity From Volume\ASPhonemeIntensityFromVolumeModuleEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\EyeControllerEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\ASMontrealPhonemeDetectionModule.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\GestureSetupWizard.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\ASAzureSpeechRecognitionSettingsEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\AnimClipExport.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\ClipFeatures.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\ASMontrealPhonemeDetectionModuleEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\PocketSphinx\ASPocketSphinxPhonemeDetectionModule.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\DefaultMarkerSettingsWindow.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\IAnimClipExportProvider.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\BlendshapeManagerEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\SetIntensityWindow.cs" />
-     <Compile Include="Assets\Rogo Digital\Shared\Editor\RDEditorShortcut.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncLanguageModel.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncUtility.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\ASMontrealLanguageModel.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\EmotionMixerWindow.cs" />
      <Compile Include="Assets\Rogo Digital\Shared\Editor\ContinuationManager.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\PoseExtractorWizard.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncPresetEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncModule.cs" />
-     <Compile Include="Assets\Rogo Digital\Shared\Editor\ModalWindow.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\BlendSystem Support\BonesOnlyBlendSystemProvider.cs" />
-     <Compile Include="Assets\Rogo Digital\Shared\Editor\ModalParent.cs" />
-     <Compile Include="Assets\Rogo Digital\Shared\Editor\RDExtensionWindow.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\ASAzureSpeechRecognitionModule.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncClipSetup.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\PocketSphinx\SphinxWrapper.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\ASAzureSpeechRecognitionSettings.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncPhonemeMap.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\TextGridUtility.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\BlendSystems\Editor\BlendshapeBlendSystemEditor.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Set Intensity From Volume\ASPhonemeIntensityFromVolumeModule.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\SpriteManagerEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\AutoSyncWindow.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\BlendSystem Support\AdvancedBlendshapeBlendSystemProvider.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncEditorExtensions.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncModuleInfoAttribute.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\ASMontrealPhonemeDetectionSettings.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\MarkerSettingsWindow.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\ASAzureSpeechRecognitionSettingsEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\ASMontrealPhonemeDetectionModuleEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\ASMontrealLanguageModel.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncPresetEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\ASAzureSpeechRecognitionSettings.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\PocketSphinx\ASPocketSphinxLanguageModelEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\PocketSphinx\ASPocketSphinxPhonemeDetectionModuleEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncDataEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\GestureSetupWizard.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\SetIntensityWindow.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncModule.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\BlendSystemEditor.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncProjectSettings.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\BlendSystem Support\AdvancedBlendshapeBlendSystemProvider.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Phoneme Marker Cleanup\ASPhonemeMarkerCleanupModule.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\PocketSphinx\ASPocketSphinxLanguageModelEditor.cs" />
-     <Compile Include="Assets\Rogo Digital\Shared\Editor\WizardWindow.cs" />
-     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\BlendSystem Support\BlendshapeBlendSystemProvider.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\AnimClipExportProviderAttribute.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncPreset.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncDataPreprocessor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\PhonemeSetEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\ASAzureSpeechRecognitionModuleEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSync.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\AnimClipExport.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\BlendSystem Support\BlendshapeBlendSystemProvider.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncModuleSettings.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\ASMontrealPhonemeDetectionModule.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\PocketSphinx\ASPocketSphinxPhonemeDetectionModule.cs" />
+     <Compile Include="Assets\Rogo Digital\Shared\Editor\RDEditorShortcut.cs" />
+     <Compile Include="Assets\Rogo Digital\Shared\Editor\ModalParent.cs" />
+     <Compile Include="Assets\Rogo Digital\Shared\Editor\RDExtensionWindow.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\LipSyncClipSetup.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncPhonemeMap.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\BlendSystems\Editor\BlendshapeBlendSystemEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\IAnimClipExportProvider.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncLanguageModel.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncUtility.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\EmotionMixerWindow.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\BlendSystem Support\BonesOnlyBlendSystemProvider.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\TextGridUtility.cs" />
+     <Compile Include="Assets\Rogo Digital\Shared\Editor\WizardWindow.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncExternalPhonemeMapEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Montreal Forced Aligner\ASMontrealLanguageModelEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\BakeBlendshapesTool.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\DefaultMarkerSettingsWindow.cs" />
+     <Compile Include="Assets\Rogo Digital\Shared\Editor\ModalWindow.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\PocketSphinx\SphinxWrapper.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncExternalPhonemeMap.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\ClipSettingsWindow.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\EyeControllerEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\ClipFeatures.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\BlendshapeManagerEditor.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\Editor\Modals\AutoSyncWindow.cs" />
+     <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Phoneme Marker Cleanup\ASPhonemeMarkerCleanupModule.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\AutoSyncConversionUtility.cs" />
      <None Include="Assets\Rogo Digital\LipSync Pro\Editor\Experimental\Animation Clip Export\0.2.0.txt" />
      <None Include="Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\SpeechSDK\REDIST.txt" />
@@ -374,35 +371,35 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.2f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="log4netPlastic">
+        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-    </Reference>
-    <Reference Include="log4netPlastic">
-        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CognitiveServices.Speech.csharp">
+        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\SpeechSDK\Plugins\x86_64\Microsoft.CognitiveServices.Speech.csharp.dll</HintPath>
+    </Reference>
     <Reference Include="unityplastic">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CognitiveServices.Speech.csharp">
-        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Assets\Rogo Digital\LipSync Pro\AutoSync\Editor\Modules\Azure Speech Recognition\SpeechSDK\Plugins\x86_64\Microsoft.CognitiveServices.Speech.csharp.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+        <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
         <HintPath>C:\Users\pstfl\Documents\Unity\Metaverse_Final\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -1102,6 +1099,30 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{34b1a778-b90d-b367-18ae-f69fc6e4e023}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="UMA_Examples_Editor.csproj">
+      <Project>{4a3e66b1-fa88-057e-fd93-6e1c93c4a672}</Project>
+      <Name>UMA_Examples_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UMA_Content.csproj">
+      <Project>{1198c977-b09c-bfea-edd4-c127dd608444}</Project>
+      <Name>UMA_Content</Name>
+    </ProjectReference>
+    <ProjectReference Include="UMA_Examples.csproj">
+      <Project>{d2711a6d-a325-f233-53b6-3cb2cd83e827}</Project>
+      <Name>UMA_Examples</Name>
+    </ProjectReference>
+    <ProjectReference Include="UMA_Core.csproj">
+      <Project>{a08824ee-17f6-01a4-ef10-e4e1224cc1a1}</Project>
+      <Name>UMA_Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Addressable_Editor.csproj">
+      <Project>{e691494c-61cb-a9ff-ca7a-b0c2cf445c4c}</Project>
+      <Name>Addressable_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UMA_Core_Editor.csproj">
+      <Project>{cdeafc0d-207b-3e67-4cbc-288172298f34}</Project>
+      <Name>UMA_Core_Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

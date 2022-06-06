@@ -339,7 +339,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Flow.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Rogo Digital/LipSync Pro/AutoSync/Editor/Modules/Azure Speech Recognition/SpeechSDK/Plugins/x86_64/Microsoft.CognitiveServices.Speech.csharp.dll"
 "Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.State/AnyState.cs"
 "Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.State/FlowState.cs"
 "Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.State/FlowStateTransition.cs"

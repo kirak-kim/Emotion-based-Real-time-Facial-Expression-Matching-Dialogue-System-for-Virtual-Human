@@ -24,7 +24,7 @@ public class Text_Input : MonoBehaviour {
         se.AddListener(GameObject.Find("TTS").GetComponent<TTS_unity>().TTS);
 
         // Fire UnityEvent at end of editing (i.e. when Enter is pressed)
-        input.onEndEdit = se;
+        //input.onEndEdit = se;(kirak)
 		
 	}
 
