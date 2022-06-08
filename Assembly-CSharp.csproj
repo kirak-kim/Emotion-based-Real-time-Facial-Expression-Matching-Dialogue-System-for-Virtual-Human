@@ -109,6 +109,7 @@
      <Compile Include="Assets\Scripts\FacialExpressions.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\BlendSystems\BlendshapeManager.cs" />
+     <Compile Include="Assets\cave_troll\scripts\camera_follow.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Rogo Digital\LipSync Pro\AutoSync\SoX Sound Exchange\sox-14.4.2-macosx\LICENSE.GPL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -145,6 +146,7 @@
      <None Include="Assets\Rogo Digital\LipSync Pro\AutoSync\SoX Sound Exchange\sox-14.4.2-win32\README.win32.txt" />
      <None Include="Assets\Rogo Digital\LipSync Pro\AutoSync\SoX Sound Exchange\sox-14.4.2-win32\ChangeLog.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\cave_troll\shaders\Standard Two Sided Soft Blend.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Rogo Digital\LipSync Pro\Examples\Models\GRFL_Head_Liza\readme.txt" />

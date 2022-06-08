@@ -69,13 +69,13 @@ public class TTS_unity : MonoBehaviour {
         string cert_file;
         string key_file;
 
-        voice_file = Application.streamingAssetsPath + "/tts.voice";
-        license_file = Application.streamingAssetsPath + "/license.lic";
+        voice_file = Application.streamingAssetsPath + "/cerevoice_Heather_48k_standard.voice";
+        license_file = Application.streamingAssetsPath + "/086A7D6D-3E99-4A25-9B91-A8174F58D54D_FMM_license.lic";
         root_cert_file = Application.streamingAssetsPath + "/root_certificate.pem";
-        cert_file = Application.streamingAssetsPath + "/VOICE_SDK_certificate.pem.crt";
-        key_file = Application.streamingAssetsPath + "/VOICE_SDK_certificate_key.pem.key";
+        cert_file = Application.streamingAssetsPath + "/086A7D6D-3E99-4A25-9B91-A8174F58D54D_FMM_client.crt";
+        key_file = Application.streamingAssetsPath + "/086A7D6D-3E99-4A25-9B91-A8174F58D54D_FMM_client.key";
 
-        if (Application.platform == RuntimePlatform.Android)
+        /* if (Application.platform == RuntimePlatform.Android)
         {
             // Need to uncompress the files to read them
             string voice_compressed = voice_file;
@@ -124,7 +124,7 @@ public class TTS_unity : MonoBehaviour {
             // Note that large voices may cause memory issues
             Debug.Log("writing " + vreader.bytesDownloaded + " bytes to voice file");
             File.WriteAllBytes(voice_file, vreader.bytes);
-        }
+        } */
 
         Debug.Log("voice file is " + voice_file);
         Debug.Log("license file is " + license_file);
@@ -156,7 +156,8 @@ public class TTS_unity : MonoBehaviour {
             int chan; // synthesis channel
             int srate; // ouput sample rate
             SWIGTYPE_p_CPRC_abuf abuf; // CereVoice audio buffer
-            string input = "Welcome to the CereVoice Unity Demo";
+            //string input = "Welcome to the CereVoice Unity Demo";
+            string input = "";
 
             Debug.Log("synthesising a test input");
             // Open a channel and synthesise to an audio buffer
@@ -417,7 +418,7 @@ public class TTS_unity : MonoBehaviour {
 
     void VisemePhrase(List<Viseme> visemes)
     {
-        Animator UMAAnimator = GameObject.Find("Troll").GetComponent<Animator>();
+        Animator UMAAnimator = GameObject.Find("Amy").GetComponent<Animator>();
 
         foreach (Viseme viseme in visemes)
         {

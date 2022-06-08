@@ -6,7 +6,7 @@ using TMPro;
 
 public class GettingInput : MonoBehaviour
 {
-    /* public TMP_InputField mainInputField;
+    public TMP_InputField mainInputField;
     public List<string> userSentences; // A list of user typed sentences
     public int numSentence; // How many sentences user typed
 
@@ -21,5 +21,5 @@ public class GettingInput : MonoBehaviour
     {
         userSentences.Add(sentence);
         numSentence++;
-    } */
+    }
 }

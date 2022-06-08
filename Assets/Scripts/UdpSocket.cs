@@ -31,18 +31,26 @@ public class UdpSocket : MonoBehaviour
     [SerializeField] int txPort = 8001; // port to send data to Python on
 
     public TMP_InputField mainInputField;
+    public TMP_Text output; //Displaying AI sentence on the screen
+    public GameObject loading;
     private List<string> userSentences; // A list of user typed sentences
-    private int numSentence; // How many sentences user typed
+    private int userNumSentence; // How many sentences user typed
+    private int AINumSentence;
     private bool submitCheck; // Checking whether the sentence is successfully added to userSentences
 
     private int emotionLabel = -1; // emotionlabel={'anger':'0','disgust':'1','fear':'2','joy':'3','neutral':'4','sadness':'5','surprise':'6'}
-    private string receivedText; // Received text from python
+    private string thisSentence;
+    private List<string> receivedText; // Received text from python
 
     public GameObject Character;
+    public GameObject TTSObject;
     public float userIntensity = 0.5f;
     public float userLerp = 0.012f;
     private FacialExpressions CharacterFacialExpressions = null;
-    int expression = 4;
+    int expression = 4; // 4 is for neutral face
+
+    private bool loadComplete = false; //Wait for Cerevoice to be loaded
+    private bool first = true;
 
 
     // Create necessary UdpClient objects
@@ -50,12 +58,12 @@ public class UdpSocket : MonoBehaviour
     IPEndPoint remoteEndPoint;
     Thread receiveThread; // Receiving Thread
 
-    IEnumerator SendDataCoroutine() // DELETE THIS: Added to show sending data from Unity to Python via UDP
+    IEnumerator SendDataCoroutine()
     {
         while (true)
         {
-            if(numSentence > 0 && submitCheck){
-                SendData(userSentences[numSentence-1].ToString());
+            if(userNumSentence > 0 && submitCheck){
+                SendData(userSentences[userNumSentence-1].ToString());
             }
             yield return new WaitForSeconds(1f);
         }
@@ -78,7 +86,9 @@ public class UdpSocket : MonoBehaviour
     {
         // User input part
         userSentences = new List<string>();
-        numSentence = 0;
+        receivedText = new List<string>();
+        userNumSentence = 0;
+        AINumSentence = 0;
         submitCheck = false;
 
         mainInputField.onEndEdit.AddListener(SubmitName); // Adding user input function
@@ -101,6 +111,7 @@ public class UdpSocket : MonoBehaviour
         print("UDP Comms Initialised");
 
         StartCoroutine(SendDataCoroutine()); // DELETE THIS: Added to show sending data from Unity to Python via UDP
+        StartCoroutine(wait3secsForLoad());
     }
 
     void Start(){
@@ -108,10 +119,22 @@ public class UdpSocket : MonoBehaviour
     }
 
     void Update(){
-        if(emotionLabel != -1){
-            expression = emotionLabel;
+        if(loadComplete){
+            if(emotionLabel != -1){
+                expression = emotionLabel;
+            }
+            CharacterFacialExpressions.Expression(expression, userIntensity, userLerp, 200, 400);
+
+            if(first){
+                TTSObject.GetComponent<TTS_unity>().TTS(thisSentence);
+                output.text = thisSentence;
+                first = false;
+            }
+            else if(receivedText[AINumSentence-1] != thisSentence){
+                TTSObject.GetComponent<TTS_unity>().TTS(thisSentence);
+                output.text = thisSentence;
+            }
         }
-        CharacterFacialExpressions.Expression(expression, userIntensity, userLerp, 200, 400);
     }
 
     // Receive data, update packets received
@@ -124,12 +147,16 @@ public class UdpSocket : MonoBehaviour
                 IPEndPoint anyIP = new IPEndPoint(IPAddress.Any, 0);
                 byte[] data = client.Receive(ref anyIP);
                 string text = Encoding.UTF8.GetString(data);
-                emotionLabel = text[0] - '0';
-                receivedText = text.Substring(1);
-
-                //Debug.Log(">> emotionLabel: " + emotionLabel);
-                Debug.Log(">> receivedText: " + receivedText);
                 ProcessInput(text);
+                AINumSentence++;
+                //Debug.Log(AINumSentence);
+
+                receivedText.Add(thisSentence);
+
+
+                Debug.Log(">> emotionLabel: " + emotionLabel);
+                Debug.Log(">> receivedText: " +receivedText[AINumSentence-1]);
+                
             }
             catch (Exception err)
             {
@@ -146,6 +173,9 @@ public class UdpSocket : MonoBehaviour
         {
             isTxStarted = true;
         }
+
+        emotionLabel = input[0] - '0';
+        thisSentence = input.Substring(1);
     }
 
     //Prevent crashes - close clients and threads properly!
@@ -161,8 +191,14 @@ public class UdpSocket : MonoBehaviour
     {
         submitCheck = false;
         userSentences.Add(sentence);
-        numSentence++;
+        userNumSentence++;
         submitCheck = true;
     }
 
+    IEnumerator wait3secsForLoad(){
+        loading.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        loading.SetActive(false);
+        loadComplete = true;
+    }
 }
