@@ -116,6 +116,7 @@ public class UdpSocket : MonoBehaviour
 
     void Start(){
         CharacterFacialExpressions = Character.GetComponent<FacialExpressions>();
+        first = true;
     }
 
     void Update(){

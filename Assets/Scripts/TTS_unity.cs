@@ -156,7 +156,6 @@ public class TTS_unity : MonoBehaviour {
             int chan; // synthesis channel
             int srate; // ouput sample rate
             SWIGTYPE_p_CPRC_abuf abuf; // CereVoice audio buffer
-            //string input = "Welcome to the CereVoice Unity Demo";
             string input = "";
 
             Debug.Log("synthesising a test input");

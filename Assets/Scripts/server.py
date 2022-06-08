@@ -18,7 +18,7 @@ i = 0
 
 while True:
     #sock.SendData('Sent from Python: ' + str(i)) # Send this string to other application
-    sock.SendData('3Hello nice to meet you') # Send this string to other application
+    sock.SendData('5My name is Amy') # Send this string to other application
     i += 1
 
     data = sock.ReadReceivedData() # read data

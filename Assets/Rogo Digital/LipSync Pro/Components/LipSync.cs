@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
@@ -629,7 +629,7 @@ namespace RogoDigital.Lipsync
 			SetEmotion("", blendTime);
 		}
 
-		private void PlayPP(LipSyncData data, float delay, float time)
+		private void PlayPP(LipSyncData data, float delay, float time) //(kirak)
 		{
 			if (data.targetComponentID != GetInstanceID())
 			{
@@ -1212,7 +1212,7 @@ namespace RogoDigital.Lipsync
 				List<Shape> shapes = new List<Shape>();
 				#endregion
 
-				if (!emotionOnly)
+				if (!emotionOnly) // Displaying phonemes (kirak)
 				{
 					#region Get Phoneme Info
 					// Add phonemes used

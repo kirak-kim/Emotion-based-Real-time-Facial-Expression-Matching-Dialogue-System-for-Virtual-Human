@@ -94,6 +94,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\Components\EyeController.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\BlendSystems\TextureOffsetManager.cs" />
+     <Compile Include="Assets\cave_troll\scripts\camera_follow.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\Classes\GestureInstance.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\Classes\LipSyncData.cs" />
@@ -109,7 +110,6 @@
      <Compile Include="Assets\Scripts\FacialExpressions.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Rogo Digital\LipSync Pro\BlendSystems\BlendshapeManager.cs" />
-     <Compile Include="Assets\cave_troll\scripts\camera_follow.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Rogo Digital\LipSync Pro\AutoSync\SoX Sound Exchange\sox-14.4.2-macosx\LICENSE.GPL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
