@@ -1212,7 +1212,7 @@ namespace RogoDigital.Lipsync
 				List<Shape> shapes = new List<Shape>();
 				#endregion
 
-				if (!emotionOnly) // Displaying phonemes (kirak)
+				if (!emotionOnly)
 				{
 					#region Get Phoneme Info
 					// Add phonemes used

@@ -1348,7 +1348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5459429585311345541, guid: 2ac7b890c2b066442b6cd451b7c67328, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[36]
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -5459429585311345541, guid: 2ac7b890c2b066442b6cd451b7c67328, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[39]
@@ -2157,7 +2157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1721958823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2471,7 +2471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2004664965
 MonoBehaviour:
   m_ObjectHideFlags: 0

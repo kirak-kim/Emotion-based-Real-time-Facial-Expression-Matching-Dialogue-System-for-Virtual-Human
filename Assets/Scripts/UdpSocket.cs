@@ -41,6 +41,7 @@ public class UdpSocket : MonoBehaviour
     private int emotionLabel = -1; // emotionlabel={'anger':'0','disgust':'1','fear':'2','joy':'3','neutral':'4','sadness':'5','surprise':'6'}
     private string thisSentence;
     private List<string> receivedText; // Received text from python
+    private int processedTexts;
 
     public GameObject Character;
     public GameObject TTSObject;
@@ -89,6 +90,7 @@ public class UdpSocket : MonoBehaviour
         receivedText = new List<string>();
         userNumSentence = 0;
         AINumSentence = 0;
+        processedTexts = 0;
         submitCheck = false;
 
         mainInputField.onEndEdit.AddListener(SubmitName); // Adding user input function
@@ -126,7 +128,22 @@ public class UdpSocket : MonoBehaviour
             }
             CharacterFacialExpressions.Expression(expression, userIntensity, userLerp, 200, 400);
 
-            if(first){
+            if(thisSentence == "Hello! Stranger?"){
+                if(first){
+                    first = false;
+                    TTSObject.GetComponent<TTS_unity>().TTS(thisSentence);
+                    output.text = thisSentence;
+                    processedTexts = 1;
+                }
+            }
+
+            else if(AINumSentence > processedTexts){
+                TTSObject.GetComponent<TTS_unity>().TTS(thisSentence);
+                output.text = thisSentence;
+                processedTexts = AINumSentence;
+            }
+
+            /* if(first){
                 TTSObject.GetComponent<TTS_unity>().TTS(thisSentence);
                 output.text = thisSentence;
                 first = false;
@@ -134,7 +151,7 @@ public class UdpSocket : MonoBehaviour
             else if(receivedText[AINumSentence-1] != thisSentence){
                 TTSObject.GetComponent<TTS_unity>().TTS(thisSentence);
                 output.text = thisSentence;
-            }
+            } */
         }
     }
 
