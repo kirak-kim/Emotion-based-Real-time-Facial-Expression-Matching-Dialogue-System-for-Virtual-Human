@@ -8,9 +8,9 @@ public class FacialExpressions : MonoBehaviour {
     public GameObject skin;
     SkinnedMeshRenderer skinnedMeshRenderer;
 
-    //[Tooltip("Manually drag lower teeth (h_TeethDown) here.")]
-    //public GameObject teeth;
-    //SkinnedMeshRenderer skinnedMeshRendererTeeth;
+    /*[Tooltip("Manually drag lower teeth (h_TeethDown) here.")]
+    public GameObject teeth;
+    SkinnedMeshRenderer skinnedMeshRendererTeeth;*/
 
     // to be controlled from outside this script:
     //int expression; // expressions are listet: 0 (neutral), 1 (happy), 2 (sad), 3 (angry), 4 (fearful), 5 (surprised)
@@ -22,8 +22,8 @@ public class FacialExpressions : MonoBehaviour {
     int BlinkTicker = 0; // counts time since last blink
     int expressionLastFrame = 0; // is set to expression after each frame, so that change can be detected at start of each frame
     float intensityLastFrame = 1;
-    float[] BlendshapesCurrent = new float[102]; //current facial expression, smoothly lerps into... 
-    float[] BlendshapesGoal = new float[102];// goal facial expression, which is instantly set to one of the lists below. 
+    float[] BlendshapesCurrent = new float[122]; //current facial expression, smoothly lerps into... 
+    float[] BlendshapesGoal = new float[122];// goal facial expression, which is instantly set to one of the lists below. 
 
     // List of blendshapes for several facial expressions.
     // each value represents one facial blendshape (~ facial muscle) which can be controlled individually. 
@@ -31,7 +31,7 @@ public class FacialExpressions : MonoBehaviour {
     // (this varies b/c a sad expression requires more closing of the eye to reach a closed position than a surprised expression etc.)
 
     // Blendshape matrix for eva
-    /* float[] Neutral = new float[67] { 
+    /*float[] Neutral = new float[67] { 
          0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //0 to 9
          0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //10 to 19
          0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //20 to 29
@@ -99,12 +99,12 @@ public class FacialExpressions : MonoBehaviour {
         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //40 to 49
         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //50 to 59
         0,  0,  0,  0,  0,  0, 90 //60 to 66. 
-    }; */
+    };*/
 
     // Blendshape matrix for Amy, Amy does not have teeth skinned mesh renderer so the length for arrays is 102
     // These blendshape facial expressions are implemented according to EMFACS.
 
-    float[] Neutral = new float[102] { 
+    /*float[] Neutral = new float[102] { 
          0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //0 to 9
          0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //10 to 19
          0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //20 to 29
@@ -127,7 +127,7 @@ public class FacialExpressions : MonoBehaviour {
          0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //50 to 59
          0,  0,  0,  0,  0, 0, 0, 0, 0, 0, //60 to 69. 
          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //70 to 79. 
-         0, 0, 0, 0, 0, 0, 0, 0, 100, 0, //80 to 89.
+         0, 0, 0, 0, 0, 0, 0, 100, 0, 0, //80 to 89.
          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //90 to 99.
          0, 0 //100 to 101.
     };
@@ -200,6 +200,118 @@ public class FacialExpressions : MonoBehaviour {
          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //80 to 89.
          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //90 to 99.
          0, 0 //100 to 101. 
+    };*/
+
+    float[] Neutral = new float[122] { 
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //0 to 9
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //10 to 19
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //20 to 29
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //30 to 39
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //40 to 49
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //50 to 59
+         0,  0,  0,  0,  0, 0, 0, 0, 0, 0, //60 to 69. 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //70 to 79. 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //80 to 89.
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //90 to 99.
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //100 to 109
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //110 to 119
+         0, 0 //120 to 121. 
+    };
+
+    float[] Happy = new float[122] { 
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //0 to 9
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //10 to 19
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //20 to 29
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //30 to 39
+         0,  0,  0,  0,  0,  100,  0,  0,  0,  0, //40 to 49
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //50 to 59
+         0,  0,  0,  0,  0, 0, 0, 0, 0, 0, //60 to 69. 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //70 to 79. 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //80 to 89.
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //90 to 99.
+         0, 100, 100, 0, 0, 0, 0, 0, 0, 0, //100 to 109
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //110 to 119
+         0, 0 //120 to 121.
+    };
+
+    float[] Sad = new float[122] { 
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //0 to 9
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //10 to 19
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //20 to 29
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //30 to 39
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //40 to 49
+         0,  0,  100,  0,  0,  0,  0,  0,  0,  0, //50 to 59
+         0,  0,  0,  0,  0, 0, 0, 0, 0, 0, //60 to 69. 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //70 to 79. 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //80 to 89.
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //90 to 99.
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 100, //100 to 109
+         0, 0, 0, 0, 100, 100, 0, 0, 0, 0, //110 to 119
+         0, 0 //120 to 121.
+    };
+
+    float[] Angry = new float[122] { 
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //0 to 9
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //10 to 19
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //20 to 29
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //30 to 39
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //40 to 49
+         100,  100,  0,  0,  0,  0,  0,  0,  0,  0, //50 to 59
+         0,  0,  0,  0,  0, 0, 0, 0, 0, 0, //60 to 69. 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //70 to 79. 
+         0, 0, 0, 0, 0, 100, 100, 0, 0, 100, //80 to 89.
+         100, 0, 0, 0, 0, 0, 0, 0, 0, 0, //90 to 99.
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 100, //100 to 109
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //110 to 119
+         0, 0 //120 to 121.
+    };
+
+    float[] Fearful = new float[122] { 
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //0 to 9
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //10 to 19
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //20 to 29
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //30 to 39
+         0,  0,  -100,  -100,  0,  0,  0,  0,  0,  100, //40 to 49
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //50 to 59
+         0,  0,  0,  0,  0, 0, 0, 0, 0, 0, //60 to 69. 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //70 to 79. 
+         0, 0, 0, 0, 0, 100, 100, 0, 0, 100, //80 to 89.
+         100, 0, 0, 0, 0, 0, 0, 0, 0, 0, //90 to 99.
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 100, //100 to 109
+         100, 100, 0, 0, 100, 100, 0, 0, 0, 0, //110 to 119
+         0, 0 //120 to 121.
+    };
+
+    float[] Surprise = new float[122] { 
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //0 to 9
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //10 to 19
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //20 to 29
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //30 to 39
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  100, //40 to 49
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //50 to 59
+         0,  0,  0,  0,  0, 0, 0, 0, 0, 0, //60 to 69. 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //70 to 79. 
+         0, 0, 0, 0, 0, 100, 100, 0, 0, 0, //80 to 89.
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //90 to 99.
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //100 to 109
+         100, 100, 0, 0, 100, 100, 0, 0, 0, 0, //110 to 119
+         0, 0 //120 to 121.
+    };
+
+    float[] Disgust = new float[122] { 
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //0 to 9
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //10 to 19
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //20 to 29
+         0,  0,  0,  0,  0,  0,  0,  0,  0,  0, //30 to 39
+         0,  100,  0,  0,  0,  0,  0,  0,  0,  0, //40 to 49
+         0,  0,  100,  0,  0,  0,  0,  0,  0,  0, //50 to 59
+         0,  0,  0,  0,  0, 0, 0, 0, 100, 100, //60 to 69. 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //70 to 79. 
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //80 to 89.
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //90 to 99.
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //100 to 109
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //110 to 119
+         0, 0 //120 to 121.
     };
 
     // Use this for initialization
@@ -230,22 +342,22 @@ public class FacialExpressions : MonoBehaviour {
 
 
             //if (Expression == 1) { Ziel = Happy; } // setting entire array w/o looping does not work robustly
-            if (expression == 4) { for (int i = 0; i < 102; i++) { BlendshapesGoal[i] = Neutral[i]; } } //up to value 67, the BlinkValue
-            if (expression == 3) { for (int i = 0; i < 102; i++) { BlendshapesGoal[i] = Happy[i]; } }
-            if (expression == 5) { for (int i = 0; i < 102; i++) { BlendshapesGoal[i] = Sad[i]; } }
-            if (expression == 0) { for (int i = 0; i < 102; i++) { BlendshapesGoal[i] = Angry[i]; } }
-            if (expression == 2) { for (int i = 0; i < 102; i++) { BlendshapesGoal[i] = Fearful[i]; } }
-            if (expression == 6) { for (int i = 0; i < 102; i++) { BlendshapesGoal[i] = Surprise[i]; } }
-            if (expression == 1) { for (int i = 0; i < 102; i++) { BlendshapesGoal[i] = Disgust[i]; } }
+            if (expression == 4) { for (int i = 0; i < 122; i++) { BlendshapesGoal[i] = Neutral[i]; } } //up to value 67, the BlinkValue
+            if (expression == 3) { for (int i = 0; i < 122; i++) { BlendshapesGoal[i] = Happy[i]; } }
+            if (expression == 5) { for (int i = 0; i < 122; i++) { BlendshapesGoal[i] = Sad[i]; } }
+            if (expression == 0) { for (int i = 0; i < 122; i++) { BlendshapesGoal[i] = Angry[i]; } }
+            if (expression == 2) { for (int i = 0; i < 122; i++) { BlendshapesGoal[i] = Fearful[i]; } }
+            if (expression == 6) { for (int i = 0; i < 122; i++) { BlendshapesGoal[i] = Surprise[i]; } }
+            if (expression == 1) { for (int i = 0; i < 122; i++) { BlendshapesGoal[i] = Disgust[i]; } }
 
             //for (int i = 0; i < BlendshapesGoal.GetLength(0); i++) { BlendshapesGoal[i] = BlendshapesGoal[i] * intensity; }
-            for (int i = 0; i < 102; i++) { BlendshapesGoal[i] = BlendshapesGoal[i] * intensity; } // reduce if intesity < 1, but not for blinking value
+            for (int i = 0; i < 122; i++) { BlendshapesGoal[i] = BlendshapesGoal[i] * intensity; } // reduce if intesity < 1, but not for blinking value
         }
 
 
         // STEP 2: lerp current blendshapes towards goal
-        for (int i = 0; i < 102; i++) { BlendshapesCurrent[i] = (BlendshapesCurrent[i] + (BlendshapesGoal[i] - BlendshapesCurrent[i]) * lerpSpeed); } // lerp expression in limited growth model (looks best here, imho). The larger lerpSpeed (currently .12), the faster the lerping. 
-        for (int i = 0; i < 102; i++) { skinnedMeshRenderer.SetBlendShapeWeight(i, (int)BlendshapesCurrent[i]); } //... and actually run blendshapes (not number 65, that's for the mouth)
+        for (int i = 0; i < 122; i++) { BlendshapesCurrent[i] = (BlendshapesCurrent[i] + (BlendshapesGoal[i] - BlendshapesCurrent[i]) * lerpSpeed); } // lerp expression in limited growth model (looks best here, imho). The larger lerpSpeed (currently .12), the faster the lerping. 
+        for (int i = 0; i < 122; i++) { skinnedMeshRenderer.SetBlendShapeWeight(i, (int)BlendshapesCurrent[i]); } //... and actually run blendshapes (not number 65, that's for the mouth)
         //skinnedMeshRendererTeeth.SetBlendShapeWeight(29, (int)BlendshapesCurrent[65]); //run teeth blendshape. Number 29 of teeth blendshapes ist Teeth_mouthopen
         
         // STEP 3: Add blinking every once in a while

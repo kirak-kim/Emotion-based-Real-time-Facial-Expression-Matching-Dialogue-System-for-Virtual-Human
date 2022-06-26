@@ -53,6 +53,8 @@ public class UdpSocket : MonoBehaviour
     private bool loadComplete = false; //Wait for Cerevoice to be loaded
     private bool first = true;
 
+    Animator amyAnimator;
+
 
     // Create necessary UdpClient objects
     UdpClient client;
@@ -117,6 +119,7 @@ public class UdpSocket : MonoBehaviour
     }
 
     void Start(){
+        amyAnimator = GameObject.Find("Amy_Genesis2").GetComponent<Animator>();
         CharacterFacialExpressions = Character.GetComponent<FacialExpressions>();
         first = true;
     }
@@ -127,6 +130,7 @@ public class UdpSocket : MonoBehaviour
                 expression = emotionLabel;
             }
             CharacterFacialExpressions.Expression(expression, userIntensity, userLerp, 200, 400);
+            
 
             if(thisSentence == "Hello! Stranger?"){
                 if(first){
@@ -141,6 +145,8 @@ public class UdpSocket : MonoBehaviour
                 TTSObject.GetComponent<TTS_unity>().TTS(thisSentence);
                 output.text = thisSentence;
                 processedTexts = AINumSentence;
+
+                amyAnimator.SetTrigger(expression.ToString());
             }
 
             /* if(first){

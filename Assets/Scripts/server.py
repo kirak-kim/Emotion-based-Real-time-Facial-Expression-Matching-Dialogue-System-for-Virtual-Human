@@ -18,7 +18,7 @@ i = 0
 
 while True:
     #sock.SendData('Sent from Python: ' + str(i)) # Send this string to other application
-    sock.SendData('5My name is Amy') # Send this string to other application
+    sock.SendData('2Im scared') # Send this string to other application
     i += 1
 
     data = sock.ReadReceivedData() # read data
@@ -26,4 +26,8 @@ while True:
     if data != None: # if NEW data has been received since last ReadReceivedData function call
         print(data) # print new received data
 
-    time.sleep(1)
+    time.sleep(10)
+
+    sock.SendData('0Im angry')
+
+    time.sleep(10)

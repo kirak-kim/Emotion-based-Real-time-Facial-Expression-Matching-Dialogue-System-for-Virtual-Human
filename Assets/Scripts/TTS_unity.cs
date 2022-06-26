@@ -417,7 +417,8 @@ public class TTS_unity : MonoBehaviour {
 
     void VisemePhrase(List<Viseme> visemes)
     {
-        Animator UMAAnimator = GameObject.Find("Amy").GetComponent<Animator>();
+        //Animator UMAAnimator = GameObject.Find("Amy").GetComponent<Animator>();
+        Animator UMAAnimator = GameObject.Find("Amy_Genesis2").GetComponent<Animator>();
 
         foreach (Viseme viseme in visemes)
         {
