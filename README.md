@@ -1,6 +1,9 @@
 # 감정에 기반한 가상인간의 대화 및 표정 실시간 생성 시스템 구현
 
-김기락, 연희연, 은태영 and 정문열. (2022). 감정에 기반한 가상인간의 대화 및 표정 실시간 생성 시스템 구현. 한국컴퓨터그래픽스학회논문지, 28(3), 23-29.
+*김기락, 연희연, 은태영 and 정문열. (2022). 감정에 기반한 가상인간의 대화 및 표정 실시간 생성 시스템 구현. 한국컴퓨터그래픽스학회논문지, 28(3), 23-29.*
+[Paper](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002862290)
+
+<img width="995" alt="그림1" src="https://user-images.githubusercontent.com/91187839/184279281-9c66f97b-fe58-483f-b121-afacb49cbbac.png">
 
 >**본 코드에는 Cerevoice의 License 파일과 대화 생성 및 감정 분석 모델 파일이 포함되어 있지 않습니다**
 
@@ -25,3 +28,10 @@ Dialogue modeling 폴더에서 실행해 주세요.
 ```python
 python src/main.py
 ```
+
+## :studio_microphone: 사용자 입력을 음성으로 받기
+**1) 유니티에서 마이크 음성 캡처** 
+
+[Link](https://github.com/kirak-kim/Real-time_Audio_From_Mic)
+
+**2) STT 적용** 
