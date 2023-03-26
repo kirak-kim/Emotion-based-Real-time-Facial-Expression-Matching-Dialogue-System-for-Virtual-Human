@@ -17,7 +17,7 @@ pip install -r ./Dialogue modeling/requirements_python.txt
 
 **2) 모델 다운 받기**
 
-구글 드라이브 링크 :
+구글 드라이브 링크 : https://drive.google.com/file/d/1EUoZsSTmzI2KpSkGFmEEze7yIW1-0pG6/view?usp=sharing
 
 위 드라이브 링크에서 다운 받아서 Dialogue modeling 폴더안에 saved_models 폴더 만들고 그 안에 넣어주세요.
 
