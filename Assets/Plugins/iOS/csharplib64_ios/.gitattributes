@@ -1,0 +1,2 @@
+libcerevoice_eng.a filter=lfs diff=lfs merge=lfs -text
+libcerevoice_eng.a" filter=lfs diff=lfs merge=lfs -text
